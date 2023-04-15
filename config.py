@@ -18,6 +18,6 @@ env = dict()
 for k,v in environ.items():
   env[k]  = v
 
-#### Check env
+#### Unit Test
 if __name__ == "__main__":
   print(env)
