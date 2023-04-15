@@ -2,12 +2,12 @@ from os      import environ
 from os.path import join, dirname
 from dotenv  import load_dotenv
 
-from decorators import exception
+from . import decorators
 
 ENV_FILE = "../.env"
 
 #### Load .env
-@exception
+@decorators.exception
 def load_env() -> None:
   env_file = join(dirname(__file__), ENV_FILE)
   load_dotenv(env_file)
